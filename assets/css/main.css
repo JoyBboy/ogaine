@@ -1,0 +1,563 @@
+:root {
+  --main-color: #3f9b8f;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #071720;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+  background-color: #051118;
+  box-shadow: 0px 2px 5px #43fff680;
+  width: 100%;
+}
+
+/* logo at the left  */
+.image {
+  margin-top: 2%;
+  display: grid;
+  width: 200px;
+}
+
+/* logo at the left ends  */
+
+/* animation in the middle */
+.middle {
+  width: 300px;
+  display: grid;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+  height: 20px;
+  width: 120px;
+  left: 20%;
+  border-radius: 20px;
+  transform: rotate(-30deg);
+  background: radial-gradient(farthest-side, #3f9b8f 90%, #0000) left
+    bottom/20px 20px no-repeat #ddd;
+  animation: l17-0 3.5s infinite alternate linear,
+    l17-1 3.5s infinite cubic-bezier(0.75, 0, 1, 0.6);
+}
+@keyframes l17-0 {
+  50% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes l17-1 {
+  50% {
+    background-position: right bottom;
+  }
+}
+/* animation at middle ends */
+
+/* buttons login and create*/
+.login {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+.log {
+  --primary-color: #c9c9c9;
+  --hovered-color: var(--main-color);
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 25px;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.log p {
+  margin: 0;
+  position: relative;
+  color: var(--primary-color);
+}
+.log::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+.log p::before {
+  position: absolute;
+  content: "login";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+.log:hover::after {
+  width: 100%;
+}
+.log:hover p::before {
+  width: 100%;
+}
+.log:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+.log svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+.create {
+  --primary-color: #c9c9c9;
+  --hovered-color: var(--main-color);
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.create p {
+  margin: 0;
+  position: relative;
+  font-size: 25px;
+  color: var(--primary-color);
+}
+.create::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+.create p::before {
+  position: absolute;
+  content: "create";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+.create:hover::after {
+  width: 100%;
+}
+.create:hover p::before {
+  width: 100%;
+}
+.create:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+.create svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+/* end button login and create*/
+
+/* h1 and button and span */
+#start {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+}
+.para {
+  /* h1 */
+  margin-bottom: 2%;
+  font-family: "Wallpoet", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #51cebd, #367f85, #367f85, #51cebd);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorMove 1s linear infinite;
+  text-wrap: nowrap;
+
+}
+@keyframes colorMove {
+  to {
+    background-position: 200%;
+  }
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+}
+#button {
+  display: flex;
+  position: relative;
+  background: none;
+  border: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg) rotateZ(45deg);
+  cursor: pointer;
+}
+
+.text {
+  /*  span start the game  */
+  content: "";
+  position: absolute;
+  top: -90px;
+  width: 7.7em;
+  height: 2.6em;
+  background-color: transparent;
+  color: var(--main-color);
+  opacity: 0;
+  transition: all 0.25s linear;
+  transform: rotateX(-32.5deg) rotateZ(-32.5deg);
+  font-size: x-large;
+  font-family: "Wallpoet", sans-serif;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+}
+#button:hover .text {
+  opacity: 1;
+}
+
+#button > .red {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  background-color: #921d1d;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.red::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1em;
+  left: 0;
+  background-color: #921d1d;
+  transform: rotateZ(-45deg) translateY(-0.5em);
+  transition: height 150ms, transform 150ms;
+}
+.red::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #921d1d;
+  transform: rotateZ(-45deg) translateY(-1em);
+  transition: transform 150ms;
+  border: 1px solid #051118;
+}
+
+#button > .base {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-color);
+  transform-style: preserve-3d;
+  border-bottom: 1px solid #051118;
+  border-right: 1px solid #051118;
+}
+.base::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transform-origin: bottom;
+  transform: rotateX(90deg);
+  border-right: 1px solid #051118;
+}
+.base::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transform-origin: right;
+  transform: rotateY(-90deg);
+  border-left: 1px solid #051118;
+}
+#button:active > .red::before {
+  transform: rotateZ(-45deg) translateY(0);
+  height: 0;
+}
+#button:active > .red::after {
+  transform: rotateZ(-45deg) translateY(0);
+}
+/* end h1 and button and span */
+
+.containers {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-left: 30%;
+  margin-top: 2%;
+}
+
+.paragraphs {
+  display: grid;
+  align-items: end;
+  justify-items: start;
+  margin-left: 3%;
+}
+.paragraphs .para-score {
+  color: green;
+  font-family: "Wallpoet", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+#score {
+  color: white;
+}
+.paragraphs .count-down {
+  font-family: "Wallpoet", sans-serif;
+  text-transform: uppercase;
+  font-size: larger;
+  color: var(--main-color);
+  font-size: 30px;
+  width: 420px;
+  text-wrap: nowrap;
+}
+#time {
+  color: white;
+}
+
+#gameBoard {
+  /* zone game */
+  border-radius: 10px;
+  padding: 1%;
+  box-shadow: 0px 1px 3px 2px rgba(67, 255, 246, 0.5);
+  display: inline-block;
+  height: 460px;
+  width: 300px;
+  overflow: hidden;
+  white-space: normal;
+  position: relative;
+  right: 2%;
+}
+.element {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 4px;
+  cursor: pointer;
+}
+
+/* ////////////////////////////////////////////////////////// */
+
+.clear {
+  display: flex;
+  justify-content: center;
+}
+#endButton {
+  /* clear button */
+  margin-top: 1.5%;
+  width: 150px;
+  height: 45px;
+  border: 2px solid #b6ccd8;
+  color: #00668c;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: #b6ccd8;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
+
+#endButton:hover {
+  background: #00668c;
+  color: #b6ccd8;
+  font-size: 23px;
+}
+
+#endMessage {
+  padding-top: 7%;
+  font-family: "Wallpoet", sans-serif;
+  text-transform: uppercase;
+  font-size: larger;
+  color: var(--main-color);
+  font-size: 30px;
+}
+#finalScore {
+  color: white;
+}
+
+.play-again {
+  margin-top: 1%;
+  --green: #1bfd9c;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(
+    to right,
+    #1bfd9c1a 1%,
+    transparent 40%,
+    transparent 60%,
+    #1bfd9c1a 100%
+  );
+  color: var(--green);
+  box-shadow: inset 0 0 10px #1bfd9c66, 0 0 9px 3px #1bfd9c1a;
+}
+
+.play-again:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px #1bfd9c99, 0 0 9px 3px #1bfd9c33;
+}
+
+.play-again:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    #1bfd9c1a 40%,
+    #1bfd9c1a 60%,
+    transparent 100%
+  );
+}
+
+.play-again:hover:before {
+  transform: translateX(15rem);
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  left: 91%;
+  margin-top: 3%;
+  border: none;
+  background: transparent;
+  color: #52a782;
+}
+
+.window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 20%;
+  background-color: #10352e;
+  border-radius: 15px;
+  box-shadow: 0px 2px 4px 3px #70e2cfe3;
+  z-index: 10;
+}
+
+.show-modal {
+  /* check */
+  display: none;
+}
+
+@media (min-width: 1700px){
+  
+  .containers {
+    position: relative;
+    right:4%;
+    margin-top: 2%;
+  }
+  #endMessage {
+    padding-top: 6%;
+    font-family: "Wallpoet", sans-serif;
+    text-transform: uppercase;
+    font-size: larger;
+    color: var(--main-color);
+    font-size: 30px;
+  }
+  .play-again{
+    margin-top: 10px;
+  }
+}
+
+.spinner {
+  position: relative;
+  width: 22.4px;
+  height: 22.4px;
+}
+
+.spinner::before,
+.spinner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: spinner-b4c8mmmd 0.5s backwards, spinner-49opz7md 1.25s 0.5s infinite ease;
+  border: 5.6px solid #51cebd;
+  border-radius: 50%;
+  box-shadow: 0 -33.6px 0 -5.6px #51cebd;
+  position: absolute;
+}
+
+.spinner::after {
+  animation-delay: 0s, 1.25s;
+}
+
+@keyframes spinner-b4c8mmmd {
+  from {
+     box-shadow: 0 0 0 -5.6px #51cebd;
+  }
+}
+
+@keyframes spinner-49opz7md {
+  to {
+     transform: rotate(360deg);
+  }
+}
