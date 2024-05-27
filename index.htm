@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE GAME</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./assets/lib/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header col-12 pt-2">
+      <div class="image">
+        <!-- <img src="./assets/images/une-manette.png" /> -->
+        <div class="spinner"></div>
+      </div>
+      <div class="middle">
+        <div class="loader"></div>
+      </div>
+
+      <div class="login">
+        <button class="log">
+          <p>login</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path>
+          </svg>
+        </button>
+        <button class="create">
+          <p>create</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <section class="section">
+
+    <div id="start">
+      <h1 class="para">Press on the elements to collect or destroy them !</h1>
+      <div class="btn">
+        <button id="button">
+          <span class="base"></span>
+          <span class="red"></span>
+          <span class="text">start the game</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="containers">
+      <div class="paragraphs">
+        <p class="para-score">Score: <span id="score">0</span></p>
+        <p class="count-down">Time left: <span id="time">30</span> seconds</p>
+      </div>
+      <div id="gameBoard">
+        <!-- Elements will be dynamically added here -->
+      </div>
+    </div>
+
+    <div class="clear">
+      <button id="endButton" style="display: none">
+        <span class="button_top"> CLEAR </span>
+      </button>
+    </div>
+
+    <button class="show-modal mt-4">check</button>
+    <div class="window hidden">
+      <button class="close"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+      </svg> </button>
+      <p id="endMessage">Your final score is <span id="finalScore">0</span></p>
+      <button class="play-again">play again</button>
+    </div>
+  </section>
+
+    <!-- ------------------------------------------------------------------------------------- -->
+
+    <script src="./assets/lib/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./assets/lib/dist/js/popper.min.js"></script>
+    <script src="./assets/lib/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
